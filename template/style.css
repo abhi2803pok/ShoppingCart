@@ -1,0 +1,113 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    font:1.6rem Helvetica;
+    height: 100vh;
+    margin: 0;
+}
+
+.header{
+    grid-area: header;
+    background-color: rgb(134, 134, 219,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.main{
+    grid-area: main;
+}
+.footer{
+    grid-area: footer;
+    background-color: rgb(223, 97, 97,0.2);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas:
+     "header"
+     "main"
+     "footer";
+     grid-template-rows: 5rem 1fr 5rem;
+     grid-template-columns: 1fr;
+     height: 100%;
+}
+.header-links{
+ display:flex;
+ justify-content: space-around;  
+}
+.header-links a:hover{
+    color: red;
+}
+.price_product{
+    display: flex;
+    
+    
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-brand{
+    margin-right:4rem ;
+}
+
+.products li{
+    flex: 0 1 34rem;
+    margin: 1rem;
+    height: 40rem;
+    
+}
+.header-links a{
+    margin: 4px;
+}
+
+ul{
+   list-style-type: none; 
+}
+
+
+.img img{
+    height: 200px;
+    width: 200px;
+}
+
+/* sidebar */   
+.brand button{
+    font-size: 3rem;
+    padding: .2rem;
+    border: none;
+    background:none;
+    color: rgb(143, 143, 179);
+    cursor: pointer;
+}
+.sidebar{
+    position: fixed;
+    transform: translateX(-30rem);
+    width: 20rem;
+    height: 100%;
+    background-color: rgb(235, 235, 228);
+}
+.sidebar.open{
+    transform: translateX(0);
+}
+
+.sidebar.close{
+    transform: translateX(-30rem);
+}
+.cross-button{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    right: .2rem;
+    cursor: pointer;
+    top: 1.5rem;
+
+}
